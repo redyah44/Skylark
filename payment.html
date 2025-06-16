@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment - Skylark Travel</title>
+</head>
+<body>
+    <h1>Pay for your flight</h1>
+    <p>Flight from {{ flight.from }} to {{ flight.to }} - {{ flight.price }} ETB</p>
+    <form method="POST" action="/payment">
+        <input type="hidden" name="flight_id" value="{{ flight.id }}">
+        <label>Name: <input type="text" name="name" required></label><br>
+        <label>Phone (for Telebirr): <input type="text" name="phone" required></label><br>
+        <button type="submit">Pay with Telebirr</button>
+    </form>
+</body>
+</html>

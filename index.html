@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skylark Travel - Flights</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>Available Flights</h1>
+    <ul>
+        {% for flight in flights %}
+        <li>{{ flight.from }} to {{ flight.to }} - {{ flight.price }} ETB
+            <a href="/book/{{ flight.id }}">Book</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
